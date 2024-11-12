@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="styles/base.css" />
+      <link rel="stylesheet" href="styles/styles.css" />
+      <link rel="stylesheet" href="styles/book.css" />
+      <title>Document</title>
+      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+      <script type="module" src="scripts/server.conf.js"></script>
+      <script type="module" src="scripts/book.js"></script>
+   </head>
+   <body>
+      <header class="header">
+         <nav class="container">
+            <ul>
+               <li><a href="index.html">Головна</a></li>
+               <li><a href="catalog.html">Каталог</a></li>
+            </ul>
+            <a href="index.html" class="logo"><h1>DropBox Library</h1></a>
+         </nav>
+      </header>
+      <main class="main">
+         <div class="reader container">
+            <aside class="reader-options">
+               <div class="themes">
+                  <h3>Теми:</h3>
+                  <ul class="asyncJThemeList options-themes"></ul>
+               </div>
+               <div class="divider"></div>
+               <div class="details">
+                  <h3 class="asyncJTitle"></h3>
+                  <p>Автор: <span class="asyncJAuthor"></span></p>
+                  <p>Рік: <span class="asyncJDate"></span></p>
+               </div>
+            </aside>
+            <div class="reader-pdf asyncJBook">
+
+            </div>
+         </div>
+      </main>
+      <footer class="footer">
+         <div class="container">Розроблено Дехтяренком Михайлом ІПС-32</div>
+      </footer>
+   </body>
+</html>

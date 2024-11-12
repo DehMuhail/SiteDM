@@ -1,0 +1,112 @@
+.catalog {
+   display: grid;
+   grid-template-columns: 1fr 4fr;
+   gap: 1.5rem;
+   align-items: start;
+   height: 100%;
+   color: var(--black);
+}
+
+@media (max-width: 768px) {
+   .catalog {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+   }
+}
+
+/* Catalog options */
+.catalog-options {
+   padding: 1rem;
+   border: 1px solid var(--dark-green);
+   box-shadow: 10px 10px var(--main-green);
+}
+
+.catalog-options h3 {
+   text-align: center;
+}
+
+.catalog-options ul {
+   margin-top: 0.5rem;
+   display: flex;
+   flex-direction: column;
+   gap: 0.5rem;
+}
+
+.catalog-options ul li span {
+   display: block;
+   padding: 0.15rem 0.75rem;
+   transition: all 0.15s ease;
+   font-size: 1.25rem;
+   cursor: pointer;
+   border: 1px solid var(--dark-green);
+   opacity: 0.9;
+}
+
+.catalog-options ul li span:hover {
+   border-radius: 12px;
+   color: var(--blacker);
+
+}
+
+.catalog-options ul li input {
+   display: none;
+}
+
+.catalog-options ul li input:checked ~ span {
+   box-shadow: 2px 3px var(--dark-green), 2px 2px 4px rgba(0,0,0,0.9);
+   opacity: 1;
+   border-radius: 12px;
+   transform: translate(-1px,-1px);
+}
+
+/* Catalog list */
+
+.catalog-list {
+   height: 100%;
+   border: 1px solid var(--dark-green);
+   display: grid;
+   grid-template-columns: repeat(auto-fill, 200px);
+   padding: 1rem;
+   gap: 1rem;
+   justify-content: center;
+   /* box-shadow: inset 4px 4px 16px rgba(0,0,0,0.75) */
+    /* 16px 16px var(--dark-green); */
+   /* background: var(--black); */
+
+}
+
+/* catalog-card */
+.catalog-card {
+   height: 320px;
+   border-bottom: 1px solid var(--white);
+   border-right: 1px solid var(--white);
+   display: flex;
+   flex-direction: column;
+   gap: 0.5rem;
+   padding: 0.5rem;
+   background: var(--black);
+   color: var(--white);
+   box-shadow: 1px 1px var(--black), 2px 2px var(--white),3px 3px var(--black),4px 4px var(--white),5px 5px var(--black),6px 6px var(--black);
+   /* box-shadow: 6px 6px var(--white), 7px 7px var(--black), 7px 5px var(--black),5px 7px var(--black) */
+}
+
+@media (max-width: 640px) {
+   .catalog-list{
+      grid-template-columns: 300px;
+   }
+   .catalog-card {
+      height: 420px;
+   }
+}
+
+.catalog-card img {
+   display: block;
+   /* flex-grow: 1; */
+   height: 0px;
+   /* object-fit: cover;  */
+   /* optional: keeps the image aspect ratio */
+   width: 100%;
+   /* border: 1px solid #000; */
+   flex-grow: 1;
+}

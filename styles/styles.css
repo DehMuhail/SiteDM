@@ -1,0 +1,106 @@
+/* Layout */
+body {
+   display: flex;
+   flex-direction: column;
+}
+
+/* Header */
+header {
+   background: var(--main-green);
+   color: var(--white);
+   border-bottom: 2px solid var(--dark-green);
+}
+
+header nav {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   gap: 0.5rem;
+}
+
+header ul {
+   display: flex;
+   gap: 0.5rem;
+}
+header ul li {
+   padding: 0.25rem 0.75rem;
+   transition: all 0.15s ease;
+   font-size: 1.25rem;
+   background: var(--highlighted-green);
+   cursor: pointer;
+}
+
+header ul li:hover {
+   background: var(--dark-green);
+   border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+   header nav {
+      flex-wrap: wrap;
+   }
+   header .logo {
+      order: 1;
+      width: 100%;
+      display: block;
+      text-align: center;
+   }
+
+   header ul {
+      order: 2;
+      width: 100%;
+      justify-content: center;
+      gap: 1rem;
+   }
+
+   header ul li {
+      padding: 0.25rem 1.75rem;
+   }
+}
+
+/* Main */
+main {
+   flex-grow: 1;
+}
+
+/* Footer */
+
+footer {
+   text-align: end;
+}
+
+/* Main classes */
+.container {
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 1rem;
+}
+
+.btn-main {
+   transition: all 0.15s ease;
+   padding: 0.25rem 1.5rem;
+   border: 1px solid var(--dark-green);
+   background: var(--main-green);
+   cursor: pointer;
+   color: var(--white)
+}
+
+.btn-main:hover {
+   border-radius: 12px;
+   border-color: var(--daren-green);
+}
+
+/* Utility classes */
+.green-text {
+   color: var(--main-green);
+}
+
+.textX2 {
+   font-size: 2rem;
+}
+
+.divider{
+   height: 1px;
+   background: var(--dark-green);
+   border-radius: 50px;
+}
