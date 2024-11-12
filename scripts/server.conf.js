@@ -1,5 +1,5 @@
 const serverConf = {
-   baseURL: "https://bobr2004.github.io/pagesJsonServer",
+   baseURL: "https://dehmuhail.github.io/jsonback/",
    coverFolder: () => `${serverConf.baseURL}/covers/`,
    getCover(coverName) {
       return this.coverFolder() + coverName;
